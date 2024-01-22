@@ -1,0 +1,290 @@
+@import url("https://cutt.ly/WwLj87rP");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --gap: 16px;
+  --wrapper: 1140px;
+  --white: #FFFFFF;
+  --black: #000000;
+  --shadow-color: #CDCDCD;
+  --font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+.header {
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  background: url(../images/Nationalpark.jpg);
+  background-size: cover;
+}
+
+.header-inhalt {
+  display: flex;
+  height: 100vh;
+  text-align: right;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-inhalt-titel {
+  font-size: 50px;
+  color: var(--white);
+}
+
+.header-inhalt-untertitel {
+  opacity: 0.9;
+  font-size: 24px;
+  color: var(--white);
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: var(--wrapper);
+}
+
+.main {
+  z-index: 1;
+  position: relative;
+}
+
+.header + .main {
+  padding-top: 100vh;
+}
+
+.gallerie {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.gallerie-innen {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) * 3);
+}
+
+.gallerie-liste {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.gallerie-liste-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap) / 2);
+}
+
+.gallerie-liste-header-icon {
+  height: 24px;
+}
+
+.gallerie-liste-feld {
+  width: calc((100% / 3) - 11px);
+}
+
+.gallerie-liste-feld-img {
+  width: 100%;
+  height: 300px;
+}
+
+@media (max-width: 767px) {
+  .mobile {
+    width: 100%;
+  }
+  
+  .header {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .header-inhalt-titel {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  
+  .header-inhalt-untertitel {
+    font-size: 16px;
+  }
+  
+  .article-inhalt-innen {
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .gallerie {
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.article-header {
+  display: flex;
+  padding: 18px 0;
+  margin-top: -74px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--white);
+}
+
+.article-header-ueberschrift {
+  font-size: 16px;
+}
+
+.article-trenner {
+  width: 55%;
+  opacity: 0.4;
+  margin: 16px 0;
+  border-color: var(--black);
+}
+
+.article-header-ueber {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.article-header-ueber-autor {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid var(--black);
+}
+
+.article-header-ueber-von {
+  font-style: italic;
+  opacity: 0.4;
+  letter-spacing: 2px;
+}
+
+.article-inhalt {
+  background: var(--white);
+}
+
+.article-inhalt-innen {
+  display: flex;
+  padding: 100px 0;
+  align-items: center;
+  gap: calc(var(--gap) * 2);
+}
+
+.article-inhalt-fig {
+  width: 50%;
+}
+
+.article-inhalt-fig-caption {
+  margin: 10px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.article-inhalt-fig-img {
+  width: 100%;
+  box-shadow: 1px 3px 10px 3px var(--shadow-color);
+}
+
+.article-inhalt-text {
+  width: 50%;
+}
+
+.article-lead {
+  background: var(--white);
+}
+
+.article-lead-innen {
+  line-height: 2;
+  padding: 0 10% 100px;
+}
+
+.lead-media {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.lead-media-video {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: var(--gap);
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../images/Lagerfeuer.jpg);
+  background-size: cover;
+}
+
+.footer-inhalt {
+  line-height: 1.5;
+  max-width: 400px;
+  color: var(--white);
+}
+
+.footer-inhalt-ueberschrift {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.footer-email {
+  display: flex;
+  gap: calc(var(--gap) * 1.5);
+}
+
+.footer-email-button {
+  padding: 8px 24px;
+  text-wrap: nowrap;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid var(--white);
+}
+
+.footer-email-input {
+  border: 0;
+  outline: 0;
+  width: 550px;
+  font-size: 18px;
+  color: var(--white);
+  background: transparent;
+  border-bottom: 1px solid var(--white);
+}
+
+.footer-email-input::placeholder {
+  color: var(--white);
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--gap);
+  margin-top: 50px;
+}
+
+.footer-social-icon {
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  background: var(--white);
+}
+
+.footer-social-icon-img {
+  height:40px;
+}
